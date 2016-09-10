@@ -6,8 +6,6 @@ $.each(queryArray, function(index, query){
 function queryTwitch(query, index){
   var queryUrl = 'https://api.twitch.tv/kraken/streams/' + query + '?callback=?'
   $.getJSON(queryUrl, function(data) {
-    console.log(data);
-    console.log(index);
     displayResult(data, index, query)
   });
 }
